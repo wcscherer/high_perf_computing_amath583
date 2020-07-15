@@ -1,0 +1,27 @@
+AMATH 583 PS1 Write Up - Wyatt Scherer - Due 4/6/2020
+
+1. What is the host name of the computer as reported by your linux environment? 
+
+Using the hostname command: Wyatts-MacBook-Pro.local
+
+2. How would you specify the name of an output file when you use the compiler if you wanted the object to have a name other than a.out?
+
+Use the -o flag at the end of the compile statement to define the output file name like such: '$ c++ cpp_file.cpp -o output_file_name.out'
+
+3. What happens if you type '$ a.out'?
+
+On Mac I get: 'bash: a.out: command not found'. Without defining a path to the object file, the bash shell interprets the command as a bash shell command. 
+The addition of './a.out' tells the shell that the object file a.out resides in the current directory defined by './'. This specifies to the shell which file to execute.
+
+4. What does clang print when you run '$ c++ --version'?
+
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Target: x86_64-apple-darwin18.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+5.(AMATH 583 only). What do the -I and -l flags do in the command we used to build a.out?
+
+The -I (eye) flag adds the specified directory to the search path for include files. In this homework, this flag includes the path to the python2.7 header file for inclusion in compiling a.out.
+The -l (ell) flag indicates to compile against shared libraries. In this homework, this flag indicates to compile against the included python2.7 library files to access the relevant commands.
+From Mac c++ manual and https://caiorss.github.io/C-Cpp-Notes/compiler-flags-options.html

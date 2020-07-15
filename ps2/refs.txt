@@ -1,0 +1,1 @@
+I relied extensively on the notes from /efs/home/public/final/grid for completing the code for the MPI laplacian. 
